@@ -283,10 +283,10 @@ a {
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    outline: transparent;
     transition: border 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: transparent;
+    
 }
 
 .modal-icon {
@@ -328,13 +328,15 @@ a {
     margin-bottom: 20px;
     width: 100%;
     height: 120px;
-    resize: none;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-
+    
     transition:  border 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    resize: none;
+    outline: transparent;
 }
 
 .modal-text::placeholder {
@@ -486,13 +488,12 @@ a {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.feature-list {
+.benefits__list {
     display: flex;
-    flex-wrap: wrap;
-    
+    justify-content: center;
 }
 
-.feature-icon {
+.benefits__icon {
     width: 270px;
     height: 120px;
     display: flex;
@@ -505,7 +506,7 @@ a {
 }
 
     
-.benefits h3 {
+.benefits__heading {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -514,21 +515,22 @@ a {
     margin-top: 0;
     margin-bottom: 10px;
 }
-.benefits p {
+.benefits__title {
     margin: 0;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
     color: var(--primery-text-color);
 }
-.benefits h2 {
+.benefits__heading {
    display: none;
 
 }
-.benefits .item {
+.benefits__item {
+
     width: 270px;
 }
-.benefits .item +.item {
+.benefits__item +.benefits__item {
     margin-left: 30px;
 }
 
@@ -537,21 +539,21 @@ a {
     padding-bottom: 94px;
     
 }
-.business h2 {
+.business__heading {
     margin: 0%;
     margin-bottom: 50px;
 }
-.business-list {
+.business__list {
     display: inline-flex;
     gap: 30px;
 }
-.business-list .item {
+.business__list--item {
     position: relative;
 }
 
-.element-business {
+.business__list--title {
     position: absolute;
-    bottom: 4px;
+    bottom: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -572,34 +574,31 @@ a {
     
 /* Comand */
 
-.comand {
+.our-command {
     background-color: #F5F4FA;
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.comand h2 {
+.benefits__heading {
     margin: 0;
     margin-bottom:50px;
 }
-.team-list { 
+.command { 
     display: inline-flex;
-
+    gap: 30px;
 }
-.team-list .item:not(:last-child) {
-    margin-right: 30px;
-}
-.team-list .item {
+.command__cart {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
     background-color: #fff;
 
 }
-.comand-info {
+.command__info {
     padding:30px 0;
 }
-.comand .comand-person {
+.command__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -609,7 +608,7 @@ a {
 
 }
 
-.comand-position {
+.command__position {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
@@ -618,13 +617,13 @@ a {
     margin-bottom: 16px;
 }
 
-.socials {
+.command__socials {
     display: inline-flex;
     justify-content: center;
     gap: 10px;
 }
 
-.icon-link {
+.command__socials--link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -636,18 +635,18 @@ a {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-icon {
+.command__socials--icon {
     fill: #AFB1B8;
     transition: fill 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-link:hover .team-icon,
-.icon-link:focus .team-icon {
+.command__socials--link:hover .command__socials--icon,
+.command__socials--link:focus .command__socials--icon {
     fill: #ffffff;
   
 }
-.icon-link:hover,
-.icon-link:focus {
+.command__socials--link:hover,
+.command__socials--link:focus {
     background: var(--accent-text-color);
 }
    
@@ -698,30 +697,40 @@ a {
 }
 
 /* footer */
-.footer-gep {
-    display: inline-flex;
-    flex-direction: column;
 
-}
-    
-.footer-main {
+.footer {
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
-.footer-style {
+.footer__style {
     display: flex;
-    align-items: baseline;
-    
-    
-}
-footer .logo {
-    color: #ffffff;
-    margin-bottom: 20px;
+    align-items: baseline; 
 }
 
-.footer-contact {
+
+.footer__logo {
+    margin-bottom: 20px;
+    
+    
+    font-style: normal;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #ffffff;
+    
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+
+}
+
+.address__contact {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -733,7 +742,7 @@ footer .logo {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
-.footer-contact-address {
+.address__location {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -746,7 +755,8 @@ footer .logo {
 }
 
 
-.footer-contact:hover {
+.address__contact:hover,
+.address__contact:focus {
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
@@ -755,30 +765,17 @@ footer .logo {
     letter-spacing: 0.03em;
     color: #FFFFFF;
 }
-.footer-contact:focus {
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    color: #FFFFFF;
 
-}
-.address-style{
-    display: inline-flex;
-    margin-right: 70px;
 
-}
-
-.address-list .item:not(:last-child) {
+.address__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
 
+
 /* footer social links */
 
-.footer-block p {
+.footer__social--title {
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
@@ -789,12 +786,12 @@ footer .logo {
     color: #FFFFFF;
 
 }
-.footer-social {
+.footer__social--list{
     display: inline-flex;
     gap: 10px;
 }
 
-.footer-link {
+.footer__social--link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -807,17 +804,17 @@ footer .logo {
 
 
 }
-.footer-icon {
+.footer__social--icon {
      fill: #FFFFFF;
      transition: fill 250ms;
 }
-.footer-link:hover,
-.footer-link:focus {
+.footer__social--link:hover,
+.footer__social--link:focus {
     background-color: var(--accent-text-color);
 }
 
 /* Footer form */
-.footer-form {
+.subscription {
     margin-left: 93px;
     display: flex;
     flex-direction: column;
@@ -826,7 +823,7 @@ footer .logo {
 }
 
 
-.footer-form h3 {
+.subscription__heading {
     text-transform:uppercase;
     margin: 0;
     margin-bottom: 20px;
@@ -839,52 +836,48 @@ footer .logo {
     color: #FFFFFF;
 }
 
-.footer-lable {
-
-}
-
-.mail-telegram {
+.subscription__section {
     display: inline-flex;
 }
 
-.footer-email {
+.subscription__lable:hover .subscription__email,
+.subscription__lable:focus .subscription__email {
+    border:1px solid var(--accent-text-color);
+    outline: 0;
+    border-color: 0;
+}
+
+.subscription__email {
+
     width: 358px;
     height: 50px;
-    padding-right: auto;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 16px;
     margin-right: 12px;
     background-color: #2F303A;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-color: 0;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
     line-height: calc(20/16);
-
     align-items: center;
     letter-spacing: 0.03em;
     transition: border 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-lable:hover .footer-email,
-.footer-lable:focus .footer-email {
-    border:1px solid var(--accent-text-color);
-    outline: 0;
-    border-color: 0;
+    outline: transparent;
 }
 
-.footer-email:not(:placeholder-shown):required:valid {
+.subscription__email:not(:placeholder-shown):required:valid {
     border-color: chartreuse;
 }
-.footer-email:not(:placeholder-shown):required:invalid {
+.subscription__email:not(:placeholder-shown):required:invalid {
     border-color: #f44336;
 }
 
-.footer-button {
+.subscription__button {
     padding: 10px 29px;
     display: flex;
     justify-content: center;
@@ -905,7 +898,7 @@ footer .logo {
     border: 0;
     cursor: pointer;
 }
-.icon-telegram {
+.subscription__icon {
     height: 24px;
     width: 24px;
     margin-left: 10px;
